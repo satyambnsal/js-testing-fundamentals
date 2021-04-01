@@ -3,7 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Satyam Bansal",
+    "email": "satyam@pesto.tech",
+    "url": "https://satyambnsal.com"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satyambnsal/js-testing-fundamentals"
+  },
   "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-jest": "^26.6.3",
     "jest": "^26.6.3"
   }
 }

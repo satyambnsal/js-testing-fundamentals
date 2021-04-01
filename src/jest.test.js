@@ -1,4 +1,5 @@
-const { sum, substract, substractAsync, sumAsync } = require('./math');
+// const { sum, substract, substractAsync, sumAsync } = require('./math');
+import { sum, substract, substractAsync, sumAsync } from './math.js';
 
 test('sum two numbers', () => {
   const a = 10;
