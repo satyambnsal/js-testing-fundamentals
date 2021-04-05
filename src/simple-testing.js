@@ -1,4 +1,4 @@
-const { sum, substract, sumAsync, substractAsync } = require('./math.js');
+const { sum, substract } = require('./math.js');
 
 const a = 20;
 const b = 4;
@@ -15,21 +15,9 @@ test('substract two numbers', () => {
   expect(result).toBe(expected);
 });
 
-test('sum two numbers in async mode', async () => {
-  let result = await sumAsync(a, b);
-  let expected = 24;
-  expect(result).toBe(expected);
-});
-
-test('substract two numbers in async mode', async () => {
-  result = await substractAsync(a, b);
-  expected = 16;
-  expect(result).toBe(expected);
-});
-
-async function test(title, callback) {
+function test(title, callback) {
   try {
-    await callback();
+    callback();
     console.log(` ✅ ${title}`);
   } catch (error) {
     console.error(` ❌ ${title}`);

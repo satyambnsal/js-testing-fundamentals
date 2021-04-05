@@ -19,6 +19,6 @@ const substractAsync = (a, b) =>
 module.exports = {
   sum,
   substract,
-  substractAsync,
   sumAsync,
+  substractAsync,
 };

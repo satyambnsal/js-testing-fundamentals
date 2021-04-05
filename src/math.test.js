@@ -24,25 +24,8 @@ test('sum two numbers in async mode', async () => {
 test('substract two numbers in async mode', async () => {
   result = await substractAsync(a, b);
   expected = 16;
-  expect(result).toBe(expected);
+  expect(result).toBeGreaterThan(15);
+  expect(result).toBeGreaterThanOrEqual(16);
+  expect(result).toBeLessThan(17);
+  expect(result).toBeLessThanOrEqual(15);
 });
-
-async function test(title, callback) {
-  try {
-    await callback();
-    console.log(` ✅ ${title}`);
-  } catch (error) {
-    console.error(` ❌ ${title}`);
-    console.error(error);
-  }
-}
-
-function expect(actual) {
-  return {
-    toBe(expected) {
-      if (actual !== expected) {
-        throw new Error(` 🔴 ${actual} is not equal to ${expected}`);
-      }
-    },
-  };
-}
